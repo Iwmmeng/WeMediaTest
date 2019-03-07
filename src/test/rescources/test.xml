@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="suite" parallel="false">
+
+
+    <test name="testDemo" annotations="JDK">
+
+        <!-- <parameter name="env"  value="${env}"/>
+         <parameter name="name"  value="${name}"/>
+         <parameter name="pwd"   value="${pwd}"/>-->
+
+        <classes>
+            <class name="com.xiaomi.wemedia.test.cases.AccountTest.Register"></class>
+
+        </classes>
+    </test>
+
+</suite>
+
+
