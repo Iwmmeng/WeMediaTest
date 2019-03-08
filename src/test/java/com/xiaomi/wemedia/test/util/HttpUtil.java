@@ -59,6 +59,7 @@ public class HttpUtil {
     }
     public static JSONObject getJsonDataOfFile(String filePath) {
 //        String path = HttpUtil.class.getClassLoader().getResource(filePath).getPath();
+//        System.out.println("path"+path);
         String dataStr = SysConfig.readerFile(filePath);
         return JSONObject.fromObject(dataStr);
     }
