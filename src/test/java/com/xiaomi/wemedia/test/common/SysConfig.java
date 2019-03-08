@@ -27,9 +27,9 @@ public class SysConfig {
 
     //读取配置文件
     static {
-        String path = SysConfig.class.getClassLoader().getResource(ConfigConstants.SYSCONFIG_PATH).getPath();
-        System.out.println("path: "+path);
-        InputStream inputStream = SysConfig.class.getResourceAsStream(ConfigConstants.SYSCONFIG_PATH);
+//        String path = SysConfig.class.getClassLoader().getResource(ConfigConstants.SYSCONFIG_PATH).getPath();
+//        System.out.println("path: "+path);
+        InputStream inputStream = SysConfig.class.getClassLoader().getResourceAsStream(ConfigConstants.SYSCONFIG_PATH);
         try {
             sysConfig.load(inputStream);
         } catch (IOException e) {
