@@ -29,8 +29,9 @@ public class SysConfig {
     static {
 //        String path = SysConfig.class.getClassLoader().getResource(ConfigConstants.SYSCONFIG_PATH).getPath();
 //        System.out.println("path: "+path);
-        InputStream inputStream = SysConfig.class.getClassLoader().getResourceAsStream(ConfigConstants.SYSCONFIG_PATH);
+        InputStream inputStream = null;
         try {
+            inputStream =  SysConfig.class.getClassLoader().getResourceAsStream(ConfigConstants.SYSCONFIG_PATH);
             sysConfig.load(inputStream);
         } catch (IOException e) {
             LOGGER.error("读取" + ConfigConstants.SYSCONFIG_PATH + "失败", e);
@@ -72,7 +73,6 @@ public class SysConfig {
      */
     public static String readerFile(String filePath) {
         try {
-
             File file = new File(filePath);
             if (file.isFile() && file.exists()) {
                 InputStreamReader read = new InputStreamReader(new FileInputStream(file), "UTF-8");

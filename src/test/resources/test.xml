@@ -12,7 +12,7 @@
          <parameter name="pwd"   value="${pwd}"/>-->
 
         <classes>
-            <class name="com.xiaomi.wemedia.test.cases.AccountTest.Register"></class>
+            <class name="com.xiaomi.wemedia.test.cases.account.Register"></class>
 
         </classes>
     </test>

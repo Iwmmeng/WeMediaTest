@@ -34,6 +34,41 @@
         "msg":"ok",
         "data": 11
       }
+    },
+    {
+      "param": {
+        "name": "name test2",
+        "nickName": "nickname test2",
+        "type": "media",
+        "category": "体育",
+        "secondaryCategory": "足球",
+        "avatar": "http://xxxxx.xxx.xxx/xxx.png",
+        "summary": "简介巴拉巴拉的简介巴拉巴拉的",
+        "email": "xxxx@xxx.com",
+        "operator": "operator 1",
+        "identityNumber": "123445199401286789",
+        "identityCardHeads": "http://xxxxx.xxx.xxx/xxxh.png",
+        "identityCardTails": "http://xxxxx.xxx.xxx/xxxt.png",
+        "handheldIdPhoto": "http://xxxxx.xxx.xxx/xxx.png",
+        "qualificationInfo": {
+          "type": "group",
+          "level": "national",
+          "unifiedIdentify": "1546548789798798",
+          "certificate": "http://xxxxx.xxx.xxx/xxx.png",
+          "internetNewsInformationServiceLicense": "http://xxxxx.xxx.xxx/xxx.png",
+          "more": "adadasd:asdasdasd",
+          "attached": [
+            "http://xxxxx.xxx.xxx/xxx1.png",
+            "http://xxxxx.xxx.xxx/xxx2.png"
+          ]
+        },
+        "subMediaAccount": false
+      },
+      "result":{
+        "code":0,
+        "msg":"ok",
+        "data": 11
+      }
     }
   ]
 }

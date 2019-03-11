@@ -18,6 +18,7 @@ public class HttpUtil {
 
     public static Object[][] buildCasesData(String filePath, String caseType) {
         JSONObject json = getJsonDataOfFile(filePath);
+        System.out.println("json"+json);
         System.out.println(caseType);
         JSONArray dataJsonArray = json.getJSONArray(caseType);
         Object[][] datas = new Object[dataJsonArray.size()][3];
@@ -58,13 +59,20 @@ public class HttpUtil {
 //        String genUrlParam = genUrlParam((Map)params, isSign);
         return paramsMap;
     }
+//    public static JSONObject getJsonDataOfFile(String filePath) {
+//        String path = HttpUtil.class.getClassLoader().getResource("").getPath()+filePath;
+//        System.out.println("Data OF file path"+filePath);
+//        String dataStr = SysConfig.readerFile(filePath);
+//        return JSONObject.fromObject(dataStr);
+//    }
+
     public static JSONObject getJsonDataOfFile(String filePath) {
-//        String path = HttpUtil.class.getClassLoader().getResource(filePath).getPath();
-//        System.out.println("Data OF file path"+path);
-        String dataStr = SysConfig.readerFile(filePath);
+        String path = HttpUtil.class.getClassLoader().getResource("").getPath()+filePath;
+        System.out.println("filepath"+ path);
+        String dataStr = SysConfig.readerFile(path);
         return JSONObject.fromObject(dataStr);
     }
-
+ // /Users/wangmeng/codeTest/we-media/target/test-classes/test/data/account/create.json
 
 
 
