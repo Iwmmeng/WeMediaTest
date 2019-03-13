@@ -26,6 +26,7 @@ public class HttpUtil {
         for(int i = 0; i < dataJsonArray.size(); ++i) {
             JSONObject dataJson = JSONObject.fromObject(dataJsonArray.get(i));
             JSONObject paramJson = JSONObject.fromObject(dataJson.get("param"));
+//            String jsonStringParams = paramJson.toString();
             HashMap params = (HashMap)JSONObject.toBean(paramJson, HashMap.class);
             JSONObject resultJson;
             if(dataJson.containsKey("request_body")) {

@@ -22,7 +22,7 @@ public class CreateTest {
 
 
 //    private static String URL = "http://10.38.164.248:8123/api/account/categories";
-    private static String URL = "http://10.232.27.231:8084/api/account";
+    private static String URL = "http://10.232.27.231:8084/api/account/";
     private static String FILE = "test/data/account/create.json";
 
     @DataProvider(name = "buildData")
@@ -31,12 +31,11 @@ public class CreateTest {
     }
 
     @Test(dataProvider = "buildData")
-    public void createTest(Map mapParams, JSONObject expectRessult, JSONObject requestBody) {
-        System.out.println("mapParams" + mapParams);
+    public void createTest(Map mapParams, JSONObject expectRessult, String requestBody) {
         Response response = given()
-                .cookie("userId","120000")
+                .cookie("userId","150000")
                 .contentType("application/json;charset=UTF-8")
-                .body(mapParams.toString())
+                .body(requestBody)
                 .post(URL);
 
         response.prettyPrint();

@@ -22,6 +22,6 @@ public class HelperUtil {
     }
 
     public static void main(String[] args) {
-        getRandomString(64);
+        getRandomString(11);
     }
 }
