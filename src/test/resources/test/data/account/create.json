@@ -2,8 +2,8 @@
   "smoke":[
     {
       "request_body": {
-        "name": "1000006",
-        "nickName": "1000006",
+        "name": "1500007",
+        "nickName": "1500007",
         "type": "media",
         "category": "体育",
         "secondaryCategory": "足球",

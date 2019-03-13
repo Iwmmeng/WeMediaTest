@@ -33,7 +33,7 @@ public class CreateTest {
     @Test(dataProvider = "buildData")
     public void createTest(Map mapParams, JSONObject expectRessult, String requestBody) {
         Response response = given()
-                .cookie("userId","150000")
+                .cookie("userId","1500007")
                 .contentType("application/json;charset=UTF-8")
                 .body(requestBody)
                 .post(URL);

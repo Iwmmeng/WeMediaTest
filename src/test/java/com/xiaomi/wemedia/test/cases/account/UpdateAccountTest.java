@@ -18,7 +18,7 @@ import static io.restassured.RestAssured.given;
  */
 public class UpdateAccountTest {
     int id;
-    private static String URL = "http://10.232.27.231:8084/api/account/7";
+    private static String URL = "http://10.232.27.231:8084/api/account/8";
     private static String FILE = "test/data/account/update.json";
 
     private static String URLAccount = "http://10.232.27.231:8084/api/account/";
@@ -55,7 +55,8 @@ public class UpdateAccountTest {
     @Test(dataProvider = "updateData") // ,dependsOnMethods = "genId"
     public void updateTest(Map mapParams, JSONObject expectRessult, String requestBody) {
         Response response = given()
-                .cookie("userId","100006")
+                .cookie("userId","1500007")
+                .cookie("mediaAccountId",8)
                 .contentType("application/json;charset=UTF-8")
                 .body(requestBody)
                 .post(URL);

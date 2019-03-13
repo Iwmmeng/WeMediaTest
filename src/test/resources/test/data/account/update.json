@@ -2,9 +2,9 @@
   "smoke":[
     {
       "request_body": {
-        "id":7,
-        "name": "1000006",
-        "nickName": "71000006",
+        "id":8,
+        "name": "1500007",
+        "nickName": "881500007",
         "type": "media",
         "category": "体育",
         "secondaryCategory": "足球",
