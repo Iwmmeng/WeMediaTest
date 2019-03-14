@@ -1,9 +1,11 @@
 package com.xiaomi.wemedia.test.cases.account;
 
+import com.xiaomi.wemedia.test.base.TestBase;
 import com.xiaomi.wemedia.test.util.HttpUtil;
 import io.restassured.response.Response;
 import net.sf.json.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,7 +18,16 @@ import static io.restassured.RestAssured.given;
  * @author wangmeng
  * @date 19/3/11
  */
-public class UpdateAccountTest {
+public class UpdateAccountTest extends TestBase {
+
+    //获取id结果，并发起请求
+    @BeforeTest
+    public void beforeTest() {
+
+
+    }
+
+
     int id;
     private static String URL = "http://10.232.27.231:8084/api/account/8";
     private static String FILE = "test/data/account/update.json";
@@ -28,17 +39,17 @@ public class UpdateAccountTest {
     public Object[][] buildData() {
         return HttpUtil.buildCasesData(FILEAccount, "smoke");
     }
+
     @DataProvider(name = "updateData")
     public Object[][] updateData() {
         return HttpUtil.buildCasesData(FILE, "smoke");
     }
 
 
-
     @Test(dataProvider = "buildData")
     public void genId(Map mapParams, JSONObject expectRessult, String requestBody) {
         Response response = given()
-                .cookie("userId","100006")
+                .cookies(cookies)
                 .contentType("application/json;charset=UTF-8")
                 .body(requestBody)
                 .post(URLAccount);
@@ -51,12 +62,11 @@ public class UpdateAccountTest {
     }
 
 
-
     @Test(dataProvider = "updateData") // ,dependsOnMethods = "genId"
     public void updateTest(Map mapParams, JSONObject expectRessult, String requestBody) {
         Response response = given()
-                .cookie("userId","1500007")
-                .cookie("mediaAccountId",8)
+                .cookies(cookies)
+                .cookie("mediaAccountId", 8)
                 .contentType("application/json;charset=UTF-8")
                 .body(requestBody)
                 .post(URL);

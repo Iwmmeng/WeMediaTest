@@ -34,7 +34,7 @@ public class HttpUtil {
                 datas[i][2] = resultJson.toString();
             }
 
-            resultJson = JSONObject.fromObject(String.valueOf(dataJson.get("result")));
+            resultJson = JSONObject.fromObject(String.valueOf(dataJson.get("exp_result")));
             datas[i][0] = params;
             datas[i][1] = resultJson;
         }
